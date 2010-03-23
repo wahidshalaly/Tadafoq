@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCashFlow", "MyCashFlow\MyCashFlow.csproj", "{2257E329-8EF7-4BA8-8B81-933523B907CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlowEngine", "CashFlowEngine\CashFlowEngine.csproj", "{3880E2F0-67BD-4276-94BD-4E71959E4F12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlowEngine.Tests", "CashFlowEngine.Tests\CashFlowEngine.Tests.csproj", "{B95841E5-2414-48AB-A68E-F84335BF125F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2257E329-8EF7-4BA8-8B81-933523B907CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2257E329-8EF7-4BA8-8B81-933523B907CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2257E329-8EF7-4BA8-8B81-933523B907CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2257E329-8EF7-4BA8-8B81-933523B907CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3880E2F0-67BD-4276-94BD-4E71959E4F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3880E2F0-67BD-4276-94BD-4E71959E4F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3880E2F0-67BD-4276-94BD-4E71959E4F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3880E2F0-67BD-4276-94BD-4E71959E4F12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B95841E5-2414-48AB-A68E-F84335BF125F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B95841E5-2414-48AB-A68E-F84335BF125F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B95841E5-2414-48AB-A68E-F84335BF125F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B95841E5-2414-48AB-A68E-F84335BF125F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

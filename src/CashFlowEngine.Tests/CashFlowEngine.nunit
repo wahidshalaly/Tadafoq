@@ -1,0 +1,6 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Debug" appbase="D:\OssProjects\MyCashFlow\src\Build" />
+  <Config name="Debug" binpathtype="Auto">
+    <assembly path="CashFlowEngine.Tests.dll" />
+  </Config>
+</NUnitProject>
