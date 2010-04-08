@@ -1,0 +1,7 @@
+D:\git.repos\Tadafoq\src\DB4O.Tests\obj\Debug\ResolveAssemblyReference.cache
+D:\git.repos\Tadafoq\src\DB4O.Tests\bin\Debug\DB4O.Tests.exe
+D:\git.repos\Tadafoq\src\DB4O.Tests\bin\Debug\DB4O.Tests.pdb
+D:\git.repos\Tadafoq\src\DB4O.Tests\bin\Debug\Db4objects.Db4o.dll
+D:\git.repos\Tadafoq\src\DB4O.Tests\bin\Debug\Db4objects.Db4o.xml
+D:\git.repos\Tadafoq\src\DB4O.Tests\obj\Debug\DB4O.Tests.exe
+D:\git.repos\Tadafoq\src\DB4O.Tests\obj\Debug\DB4O.Tests.pdb

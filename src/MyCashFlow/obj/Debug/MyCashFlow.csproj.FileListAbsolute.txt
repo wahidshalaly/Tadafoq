@@ -1,0 +1,5 @@
+D:\git.repos\Tadafoq\src\Build\MyCashFlow.dll
+D:\git.repos\Tadafoq\src\Build\MyCashFlow.pdb
+D:\git.repos\Tadafoq\src\MyCashFlow\obj\Debug\ResolveAssemblyReference.cache
+D:\git.repos\Tadafoq\src\MyCashFlow\obj\Debug\MyCashFlow.dll
+D:\git.repos\Tadafoq\src\MyCashFlow\obj\Debug\MyCashFlow.pdb

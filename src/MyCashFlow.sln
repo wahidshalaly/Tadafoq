@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlowEngine", "CashFlowE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlowEngine.Tests", "CashFlowEngine.Tests\CashFlowEngine.Tests.csproj", "{B95841E5-2414-48AB-A68E-F84335BF125F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB4O.Tests", "DB4O.Tests\DB4O.Tests.csproj", "{A1EBCE90-166E-4D29-873C-FC5596363816}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{B95841E5-2414-48AB-A68E-F84335BF125F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B95841E5-2414-48AB-A68E-F84335BF125F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B95841E5-2414-48AB-A68E-F84335BF125F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1EBCE90-166E-4D29-873C-FC5596363816}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1EBCE90-166E-4D29-873C-FC5596363816}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1EBCE90-166E-4D29-873C-FC5596363816}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1EBCE90-166E-4D29-873C-FC5596363816}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -51,14 +51,23 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="Bill.cs" />
+    <Compile Include="Note.cs" />
     <Compile Include="DomainServices\CashFlowService.cs" />
     <Compile Include="CheckingAccount.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="DomainServices\ICashFlowService.cs" />
+    <Compile Include="IAccount.cs" />
+    <Compile Include="INote.cs" />
+    <Compile Include="IPayable.cs" />
+    <Compile Include="IReceivable.cs" />
+    <Compile Include="ITransaction.cs" />
     <Compile Include="Paycheck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavingAccount.cs" />
     <Compile Include="SystemMessages.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagrams\MyCashFlowOverview.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
