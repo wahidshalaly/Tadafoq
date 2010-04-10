@@ -2,19 +2,12 @@
 
 namespace CashFlowEngine
 {
-	public class CashFlowService : CashFlowEngine.ICashFlowService
+	public class CashFlowService : ICashFlowService
 	{
-		public long OpenSavingAccount(long customerId, string name, string description, decimal openingBalance)
-		{
-			throw new NotImplementedException();
-		}
+		// need to add methods to schedule paychecks & bills
+		// to have useful forcasting
 
-		public long OpenCheckingAccount(long customerId, string name, string description)
-		{
-			throw new NotImplementedException();
-		}
-
-		public decimal GetCurrentBalance(long accountId)
+		public long ForcastBalanceAt(DateTime date, long forAccountId)
 		{
 			throw new NotImplementedException();
 		}

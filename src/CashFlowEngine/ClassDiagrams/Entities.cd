@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CashFlowEngine.Account" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAABAAgAAAAAAAEAAQEAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Entities\Account.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CashFlowEngine.Note" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgACAAAAgAAACAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Entities\Note.cs</FileName>
+      <NewMemberFileName>Bill.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CashFlowEngine.CheckingAccount" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CheckingAccount.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CashFlowEngine.Customer" Collapsed="true">
+    <Position X="6.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAEAAAAAAQIIAAAAAQAAAAAAAAACAQAACABAAAAA=</HashCode>
+      <FileName>Entities\Customer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Payables" />
+      <Property Name="Receivables" />
+      <Property Name="Accounts" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CashFlowEngine.Paycheck" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAIAAAUAAAAAAAAAAABAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Entities\Paycheck.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Collections" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CashFlowEngine.CreditCardAccount" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\CreditCardAccount.cs</FileName>
+      <NewMemberFileName>Entities\SavingAccount.cs</NewMemberFileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CashFlowEngine.Bill" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAIBAAAAAAAIAAAAAABAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Entities\Bill.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Payments" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CashFlowEngine.Payment" Collapsed="true">
+    <Position X="2.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAACAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Payment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CashFlowEngine.Collection" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAACAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Collection.cs</FileName>
+      <NewMemberFileName>Payment.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CashFlowEngine.SavingAccount" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\SavingAccount.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="CashFlowEngine.IPayable" Collapsed="true">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Interfaces\IPayable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CashFlowEngine.IReceivable" Collapsed="true">
+    <Position X="7.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Interfaces\IReceivable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CashFlowEngine.IAccount" Collapsed="true">
+    <Position X="6.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAEAAQEAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Interfaces\IAccount.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="CashFlowEngine.TransactionType" Collapsed="true">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAEAAAAAAAAACAAAAAAAAI=</HashCode>
+      <FileName>Interfaces\ITransaction.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CashFlowEngine.NoteState" Collapsed="true">
+    <Position X="12" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAAABAACAAAAAAAQAAA=</HashCode>
+      <FileName>Entities\PayableState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>
