@@ -31,10 +31,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Db4objects.Db4o, Version=7.12.132.14217, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\db4o\db4o-7.12\bin\net-3.5\Db4objects.Db4o.dll</HintPath>
-    </Reference>
     <Reference Include="nunit.framework, Version=2.5.2.9222, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\libs\nunit\nunit.framework.dll</HintPath>
@@ -57,23 +53,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OldTestsToBeReviewed\Customer_can_deposit.cs" />
-    <Compile Include="OldTestsToBeReviewed\Customer_can_forecast_balances.cs" />
-    <Compile Include="OldTestsToBeReviewed\Customer_can_make_schedules.cs" />
-    <Compile Include="OldTestsToBeReviewed\Customer_can_open_account.cs" />
-    <Compile Include="OldTestsToBeReviewed\Customer_can_pay_bills.cs" />
-    <Compile Include="OldTestsToBeReviewed\Customer_can_withdraw.cs" />
+    <None Include="OldTestsToBeReviewed\Customer_can_deposit.cs" />
+    <None Include="OldTestsToBeReviewed\Customer_can_forecast_balances.cs" />
+    <None Include="OldTestsToBeReviewed\Customer_can_make_schedules.cs" />
+    <None Include="OldTestsToBeReviewed\Customer_can_open_account.cs" />
+    <None Include="OldTestsToBeReviewed\Customer_can_pay_bills.cs" />
+    <None Include="OldTestsToBeReviewed\Customer_can_withdraw.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTests\AccountTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CashFlowEngine\CashFlowEngine.csproj">
       <Project>{3880E2F0-67BD-4276-94BD-4E71959E4F12}</Project>
       <Name>CashFlowEngine</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TddTests\" />
-    <Folder Include="UnitTests\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -55,6 +55,7 @@
     <Compile Include="Entities\Bill.cs" />
     <Compile Include="Entities\Collection.cs" />
     <Compile Include="Entities\CreditCardAccount.cs" />
+    <Compile Include="Entities\NoteState.cs" />
     <Compile Include="Interfaces\ICustomer.cs" />
     <Compile Include="Entities\Payment.cs" />
     <Compile Include="Entities\Note.cs" />

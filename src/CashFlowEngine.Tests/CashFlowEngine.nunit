@@ -1,6 +1,6 @@
 ﻿<NUnitProject>
-  <Settings activeconfig="Debug" appbase="D:\OssProjects\MyCashFlow\src\Build" />
+  <Settings activeconfig="Debug" appbase="D:\git.repos\Tadafoq" />
   <Config name="Debug" binpathtype="Auto">
-    <assembly path="CashFlowEngine.Tests.dll" />
+    <assembly path="src\Build\CashFlowEngine.Tests.dll" />
   </Config>
 </NUnitProject>
