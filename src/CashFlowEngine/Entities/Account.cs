@@ -11,9 +11,10 @@ namespace CashFlowEngine
 
 		public Account(string name, string description, decimal openingBalance)
 		{
-			Check.Require(name.IsNotEmpty(), SystemMessages.Errors.ValueIsRequired("Name"));
+			Check.Require(name.IsNotEmpty(), SystemMessages.Errors.ValueIsRequired("name"));
 			Check.Require(openingBalance >= 0, SystemMessages.Errors.OpeningBalanceMustBeGreaterThanZero);
 
+			Id = Guid.NewGuid();
 			Name = name;
 			Description = description;
 			OpeningBalance = openingBalance;
@@ -28,7 +29,7 @@ namespace CashFlowEngine
 
 		public virtual void Deposit(decimal amount)
 		{
-			Check.Require(amount > 0, SystemMessages.Errors.WithdrawnAmountMustBeGreaterThanZero);
+			Check.Require(amount > 0, SystemMessages.Errors.DepositedAmountMustBeGreaterThanZero);
 			CurrentBalance += amount;
 		}
 
