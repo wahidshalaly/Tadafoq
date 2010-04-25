@@ -7,6 +7,19 @@ namespace CashFlowEngine.Tests.UnitTests
 	[TestFixture]
 	public class AccountTests
 	{
+		private decimal _openingBalance = 2000m;
+		private decimal _positiveAmount = 500m;
+		private decimal _negativeAmount = -300m;
+		private Account _account;
+
+		private void Given_account_with_positive_balance()
+		{
+			string name = "Account Name";
+			string description = "Account Description";
+
+			_account = new Account(name, description, _openingBalance);
+		}
+
 		#region Constructor test cases
 
 		[Test]
@@ -102,130 +115,154 @@ namespace CashFlowEngine.Tests.UnitTests
 
 		#region Deposit() method test cases
 
+		private void When_depositing_positive_amount()
+		{
+			_account.Deposit(_positiveAmount);
+		}
+
+		private void When_depositing_negative_amount()
+		{
+			_account.Deposit(_negativeAmount);
+		}
+
+		private void When_depositing_zero()
+		{
+			_account.Deposit(0m);
+		}
+
 		[Test]
 		public void Can_deposit_positive_amounts()
 		{
-			string name = "Account Name";
-			string description = "Account Description";
-			decimal openingBalance = 2500m;
-			decimal amount = 1000m;
+			Given_account_with_positive_balance();
 
-			// Given account
-			var account = new Account(name, description, openingBalance);
-
-			// When depositing positive amounts
-			account.Deposit(amount);
+			When_depositing_positive_amount();
 
 			// Then
 			// 1. Current balance should increase by deposited amount
-			Assert.AreEqual(openingBalance, account.OpeningBalance);
+			Assert.AreEqual(_openingBalance, _account.OpeningBalance);
 			// 2. Opening balance should stay the same
-			Assert.AreEqual(openingBalance + amount, account.CurrentBalance);
+			Assert.AreEqual(_openingBalance + _positiveAmount, _account.CurrentBalance);
 		}
 
 		[Test]
 		public void Cannot_deposit_negative_amounts()
 		{
-			string name = "Account Name";
-			string description = "Account Description";
-			decimal openingBalance = 2500m;
-			decimal amount = -1000m;
+			Given_account_with_positive_balance();
 
-			// Given account
-			var account = new Account(name, description, openingBalance);
+			var exception = Assert.Throws<PreconditionException>(() => When_depositing_negative_amount());
 
-			// When depositing a non-positive accounts
-			var exception = Assert.Throws<PreconditionException>(() => account.Deposit(amount));
-
-			// 1. Throws an exception with an error message `DepositedAmountMustBeGreaterThanZero`
+			// 1. Throws an exception
 			Assert.AreEqual(exception.Message, SystemMessages.Errors.DepositedAmountMustBeGreaterThanZero);
 			// 2. Balances shouldn't be modified
-			Assert.AreEqual(openingBalance, account.OpeningBalance);
-			Assert.AreEqual(openingBalance, account.CurrentBalance);
+			Assert.AreEqual(_openingBalance, _account.OpeningBalance);
+			Assert.AreEqual(_openingBalance, _account.CurrentBalance);
 		}
 
 		[Test]
-		public void Cannot_deposit_Zero_amount()
+		public void Cannot_deposit_Zero()
 		{
-			string name = "Account Name";
-			string description = "Account Description";
-			decimal openingBalance = 2500m;
-			decimal amount = 0m;
+			Given_account_with_positive_balance();
 
-			// Given account
-			var account = new Account(name, description, openingBalance);
+			var exception = Assert.Throws<PreconditionException>(() => When_depositing_zero());
 
-			// When depositing a non-positive accounts
-			var exception = Assert.Throws<PreconditionException>(() => account.Deposit(amount));
-
-			// 1. Throws an exception with an error message `DepositedAmountMustBeGreaterThanZero`
+			// 1. Throws an exception
 			Assert.AreEqual(exception.Message, SystemMessages.Errors.DepositedAmountMustBeGreaterThanZero);
 			// 2. Balances shouldn't be modified
-			Assert.AreEqual(openingBalance, account.OpeningBalance);
-			Assert.AreEqual(openingBalance, account.CurrentBalance);
+			Assert.AreEqual(_openingBalance, _account.OpeningBalance);
+			Assert.AreEqual(_openingBalance, _account.CurrentBalance);
 		}
 
 		#endregion
 
 		#region Withdraw() method test cases
 
+		private void When_withdrawing_positive_amount_less_than_balance()
+		{
+			_account.Withdraw(_positiveAmount);
+		}
+
+		private void When_withdrawing_positive_amount_equals_balance()
+		{
+			_account.Withdraw(_openingBalance);
+		}
+
+		private void When_withdrawing_positive_amount_greater_than_balance()
+		{
+			_account.Withdraw(_openingBalance + _positiveAmount);
+		}
+
+		private void When_withdrawing_negative_amount()
+		{
+			_account.Withdraw(_negativeAmount);
+		}
+
+		private void When_withdrawing_zero_amount()
+		{
+			_account.Withdraw(0m);
+		}
+
 		[Test]
 		public void Can_withdraw_amount_less_than_balance()
 		{
-			string name = "Account Name";
-			string description = "Account Description";
-			decimal openingBalance = 2500m;
-			decimal amount = openingBalance;
+			Given_account_with_positive_balance();
 
-			// Given account with balance greater than Zero
-			var account = new Account(name, description, openingBalance);
-
-			// When withdraw amount less than balance and greater than Zero
-			account.Withdraw(amount);
+			When_withdrawing_positive_amount_less_than_balance();
 
 			// Then 
 			// 1. balance should decrease by withdrawn amount
-			Assert.AreEqual(openingBalance - amount, account.CurrentBalance);
+			Assert.AreEqual(_openingBalance - _positiveAmount, _account.CurrentBalance);
 			// 2. opening balance should stay the same
-			Assert.AreEqual(openingBalance, account.OpeningBalance);
+			Assert.AreEqual(_openingBalance, _account.OpeningBalance);
 		}
 
 		[Test]
 		public void Can_withdraw_amount_equals_balance()
 		{
-			string name = "Account Name";
-			string description = "Account Description";
-			decimal openingBalance = 2500m;
-			decimal amount = 1000m;
+			Given_account_with_positive_balance();
 
-			// Given account with balance greater than Zero
-			var account = new Account(name, description, openingBalance);
-
-			// When withdraw amount less than balance and greater than Zero
-			account.Withdraw(amount);
+			When_withdrawing_positive_amount_equals_balance();
 
 			// Then 
-			// 1. balance should decrease by withdrawn amount
-			Assert.AreEqual(openingBalance - amount, account.CurrentBalance);
+			// 1. balance should by Zero
+			Assert.AreEqual(0m, _account.CurrentBalance);
 			// 2. opening balance should stay the same
-			Assert.AreEqual(openingBalance, account.OpeningBalance);
+			Assert.AreEqual(_openingBalance, _account.OpeningBalance);
 		}
 
 		[Test]
 		public void Cannot_withdraw_amount_greater_than_balance()
 		{
-			string name = "Account Name";
-			string description = "Account Description";
-			decimal openingBalance = 2500m;
-			decimal amount = 3000m;
+			Given_account_with_positive_balance();
 
-			// Given account with balance greater than Zero
-			var account = new Account(name, description, openingBalance);
+			var exception = Assert.Throws<PreconditionException>(
+				() => When_withdrawing_positive_amount_greater_than_balance());
 
-			// When withdraw amount greater than balance
-			var exception = Assert.Throws<PreconditionException>(() => account.Withdraw(amount));
-			// Throws an exception with an error message `WithdrawnAmountMustBeLessThanOrEqualBalance`
-			Assert.AreEqual(exception.Message, SystemMessages.Errors.WithdrawnAmountMustBeLessThanOrEqualBalance);
+			Assert.AreEqual(exception.Message, 
+				SystemMessages.Errors.WithdrawnAmountMustBeLessThanOrEqualBalance);
+		}
+
+		[Test]
+		public void Cannot_withdraw_zero_amount()
+		{
+			Given_account_with_positive_balance();
+
+			var exception = Assert.Throws<PreconditionException>(
+				() => When_withdrawing_zero_amount());
+
+			Assert.AreEqual(exception.Message,
+				SystemMessages.Errors.WithdrawnAmountMustBeGreaterThanZero);
+		}
+
+		[Test]
+		public void Cannot_withdraw_negative_amount()
+		{
+			Given_account_with_positive_balance();
+
+			var exception = Assert.Throws<PreconditionException>(
+				() => When_withdrawing_negative_amount());
+
+			Assert.AreEqual(exception.Message,
+				SystemMessages.Errors.WithdrawnAmountMustBeGreaterThanZero);
 		}
 
 		#endregion

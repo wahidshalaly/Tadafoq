@@ -2,7 +2,7 @@
 <testProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gallio.org/">
   <testPackage shadowCopy="false" debug="false">
     <files>
-      <file>..\Build\CashFlowEngine.Tests.dll</file>
+      <file>Build\CashFlowEngine.Tests.dll</file>
     </files>
     <hintDirectories />
     <excludedFrameworkIds />

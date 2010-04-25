@@ -50,7 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DomainServices\AccountService.cs" />
+    <Compile Include="DomainServices\ISerialGenerator.cs" />
     <Compile Include="DomainServices\IAccountService.cs" />
+    <Compile Include="DomainServices\SerialGenerator.cs" />
     <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\Bill.cs" />
     <Compile Include="Entities\Collection.cs" />
@@ -67,11 +69,12 @@
     <Compile Include="Interfaces\INote.cs" />
     <Compile Include="Interfaces\IPayable.cs" />
     <Compile Include="Interfaces\IReceivable.cs" />
-    <Compile Include="Interfaces\ITransaction.cs" />
+    <Compile Include="Entities\TransactionType.cs" />
     <Compile Include="Entities\Paycheck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\SavingAccount.cs" />
     <Compile Include="SystemMessages.cs" />
+    <Compile Include="Entities\TransactionLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagrams\Interfaces.cd" />
